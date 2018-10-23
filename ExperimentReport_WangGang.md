@@ -10,6 +10,7 @@
 
 1. CPLFree()函数和GDALClose()函数的混淆。
    曾经把CPLMalloc()的指针用GDALClose()函数清除，导致编译出错。截图如下:
+
    ![](https://github.com/Histra/ThirdDemo/blob/master/ExperimentReportPic_01.png)
 
    注意，CPLFree()对应CPLMalloc();
@@ -20,12 +21,15 @@
    对于superman.jpg中的RGB(x,y,z),应该同时满足三个条件。
 
    最初写的版本代码如下：
+
    ![](https://github.com/Histra/ThirdDemo/blob/master/ExperimentReportPic_03.png)
 
    导致结果如下：
+
    ![](https://github.com/Histra/ThirdDemo/blob/master/ExperimentReportPic_02.png)
 
    更改后结果如下：
+
    ![](https://github.com/Histra/ThirdDemo/blob/master/ExperimentReportPic_04.png)
 
 #### 实验反思总结：
